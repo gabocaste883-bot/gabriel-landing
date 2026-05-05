@@ -1,54 +1,26 @@
 # Landing page de Gabriel Castellanos
 
-Landing page en React + Vite + Tailwind para captar emprendedores interesados en una sesión gratuita de claridad de negocio.
+Landing page en React + Vite + Tailwind para captar emprendedores y pequeñas empresas interesadas en una sesión gratuita de diagnóstico de negocio.
 
-## Cómo verla en tu computador
+## Cambios incluidos
 
-1. Instala Node.js desde https://nodejs.org/
-2. Abre una terminal dentro de esta carpeta.
-3. Ejecuta:
+- Foto profesional incorporada en el hero, menú, sección Sobre mí y contacto.
+- Dos imágenes visuales adicionales: mockup de plan de negocio y mockup de análisis financiero.
+- Versión en español e inglés con botón de cambio de idioma.
+- WhatsApp conectado a +971 54 539 7901.
+- Servicios pagos en pesos colombianos y dólares.
 
-```bash
-npm install
-npm run dev
-```
+## Precios configurados
 
-4. Abre el enlace que aparezca, normalmente:
-
-```txt
-http://localhost:5173
-```
-
-## Cómo publicarla gratis en Vercel
-
-1. Crea una cuenta en https://github.com/
-2. Crea un repositorio nuevo llamado `gabriel-landing`.
-3. Sube todos los archivos de esta carpeta al repositorio.
-4. Crea una cuenta en https://vercel.com/
-5. En Vercel elige `Add New Project`.
-6. Conecta tu GitHub y selecciona el repositorio `gabriel-landing`.
-7. Vercel detectará Vite automáticamente.
-8. Haz clic en `Deploy`.
-
-Tu enlace quedará similar a:
-
-```txt
-gabriel-landing.vercel.app
-```
-
-## Datos ya configurados
-
-- WhatsApp: +971 54 539 7901
-- LinkedIn: https://www.linkedin.com/in/gabriel-alonso-castellanos-restrepo-a23a9b1ba
-- Oferta gratuita: sesión de claridad de negocio de 45 minutos
-- Servicios pagos en COP:
-  - Plan de Negocio Express: desde $390.000 COP
-  - Plan de Negocio Estratégico: desde $1.200.000 COP
-  - Acompañamiento Emprendedor: desde $2.000.000 COP
+- Diagnóstico y Ruta de Acción: $390.000 COP / USD 97
+- Plan de Negocio Estratégico: $1.200.000 COP / USD 297
+- Acompañamiento para Ordenar y Rentabilizar: $2.000.000 COP / USD 497
 
 ## Archivos importantes
 
-- `src/App.jsx`: aquí está toda la landing page.
-- `src/index.css`: estilos base y Tailwind.
-- `package.json`: dependencias del proyecto.
-- `vite.config.js`: configuración de Vite y Tailwind.
+- `src/App.jsx`: contenido principal de la landing.
+- `public/gabriel-profile.jpg`: foto profesional.
+- `public/plan-mockup.svg`: imagen visual de plan de negocio.
+- `public/dashboard-mockup.svg`: imagen visual de análisis financiero.
+
+- `public/brand-banner.jpg`: banner de marca incorporado en la landing.

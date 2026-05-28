@@ -4,17 +4,27 @@ Landing page en React + Vite + Tailwind para captar emprendedores y pequeñas em
 
 ## Cambios de esta versión
 
-- Imagen hero actualizada con fotografía profesional de Gabriel en ambiente corporativo.
-- Colores más corporativos: azul noche, dorado y blanco.
-- Nombres nuevos de imágenes para forzar actualización en Vercel:
-  - `hero-gabriel-corporativo-v3.webp`
-  - `method-consultoria-corporativa-v3.webp`
-- Foto de perfil actualizada en `gabriel-profile.jpg`.
-- Se mantiene botón de WhatsApp, español e inglés y servicios en COP/USD.
+- Logo corporativo nuevo en el menú.
+- Colores corporativos: azul noche, dorado y blanco.
+- Imagen principal nueva con enfoque profesional.
+- Imagen de la sección Sobre mí reemplazada.
+- Imagen de contacto reemplazada.
+- Imagen de metodología actualizada.
+- WhatsApp conectado a +971 54 539 7901.
 
-## Publicar en Vercel
+## Archivos importantes
 
-Subir a GitHub:
+- `src/App.jsx`: contenido principal de la landing.
+- `src/index.css`: estilos base y Tailwind.
+- `public/gabriel-logo-corporativo.svg`: logo principal.
+- `public/hero-gabriel-corporativo-v4.webp`: imagen principal.
+- `public/gabriel-about-professional-v4.webp`: imagen Sobre mí.
+- `public/gabriel-contact-professional-v4.webp`: imagen contacto.
+- `public/method-consultoria-corporativa-v4.webp`: imagen metodología.
+
+## Publicación
+
+Subir a GitHub solo:
 
 - `public`
 - `src`

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="140" viewBox="0 0 560 140" fill="none">
+  <rect width="560" height="140" rx="28" fill="#07111F"/>
+  <circle cx="70" cy="70" r="43" fill="none" stroke="#D4AF37" stroke-width="7"/>
+  <path d="M91 46C84 38 74 34 62 34C40 34 25 49 25 70C25 92 40 107 63 107C80 107 93 98 99 85" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M72 73H105V105" stroke="#D4AF37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="135" y="62" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="1">GABRIEL CASTELLANOS</text>
+  <text x="137" y="94" fill="#C7CED8" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" letter-spacing="4">CONSULTOR DE NEGOCIOS</text>
+</svg>

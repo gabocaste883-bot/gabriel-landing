@@ -112,29 +112,15 @@ function Header({ t, lang, setLang }) {
 
 function HeroVisual() {
   return (
-    <div className="heroVisual" aria-label="Gabriel Castellanos consultor de negocios">
+    <div className="heroVisual heroDashboard" aria-label="Dashboard corporativo de estrategia, procesos y rentabilidad">
       <div className="halo halo1" />
       <div className="halo halo2" />
-      <div className="visualPanel">
-        <div className="photoWrap">
-          <img src="/gabriel-foto-real.jpg" alt="Gabriel Castellanos" />
-        </div>
-        <div className="metricCard mainMetric">
-          <span>Diagnóstico de negocio</span>
+      <div className="dashboardImageShell">
+        <img src="/hero-corporativo-dashboard.webp" alt="Dashboard corporativo con análisis financiero y plan de acción" />
+        <div className="dashboardOverlay">
+          <span>Diagnóstico estratégico</span>
           <strong>Claridad para decidir</strong>
           <small>Estrategia · Procesos · Rentabilidad</small>
-        </div>
-        <div className="miniChart">
-          <i style={{ height: "38%" }} />
-          <i style={{ height: "56%" }} />
-          <i style={{ height: "44%" }} />
-          <i style={{ height: "72%" }} />
-          <i style={{ height: "90%" }} />
-        </div>
-        <div className="floatingList">
-          <p><b>+18%</b> rentabilidad</p>
-          <p><b>-12%</b> costos</p>
-          <p><b>78%</b> procesos</p>
         </div>
       </div>
     </div>
@@ -170,7 +156,12 @@ function App() {
               <a className="secondaryBtn" href="#servicios">{t.secondary} →</a>
             </div>
             <div className="proofGrid">
-              {t.proof.map(([a,b]) => <div className="proof" key={a}><strong>{a}</strong><span>{b}</span></div>)}
+              {t.proof.map(([a,b], index) => (
+                <div className="proof" key={a}>
+                  <div className="proofIcon">{["◷", "◎", "◌"][index]}</div>
+                  <div><strong>{a}</strong><span>{b}</span></div>
+                </div>
+              ))}
             </div>
           </div>
           <HeroVisual />

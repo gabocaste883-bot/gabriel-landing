@@ -117,11 +117,6 @@ function HeroVisual() {
       <div className="halo halo2" />
       <div className="dashboardImageShell">
         <img src="/hero-corporativo-dashboard.webp" alt="Dashboard corporativo con análisis financiero y plan de acción" />
-        <div className="dashboardOverlay">
-          <span>Diagnóstico estratégico</span>
-          <strong>Claridad para decidir</strong>
-          <small>Estrategia · Procesos · Rentabilidad</small>
-        </div>
       </div>
     </div>
   );

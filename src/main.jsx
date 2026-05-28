@@ -143,15 +143,8 @@ function HeroVisual() {
 
 function MethodVisual() {
   return (
-    <div className="methodVisual" aria-hidden="true">
-      <div className="dashTop">
-        <span /> <span /> <span />
-      </div>
-      <div className="dashGrid">
-        <div className="bigGraph"><div className="line" /></div>
-        <div className="sideStats"><p>Rentabilidad <b>+18%</b></p><p>Costos <b>-12%</b></p><p>Procesos <b>78%</b></p></div>
-      </div>
-      <div className="dashFooter">Plan de acción · prioridades · seguimiento</div>
+    <div className="methodImageFrame" aria-label="Diagnóstico, análisis y plan de acción para consultoría de negocios">
+      <img src="/method-corporativo.webp" alt="Dashboard corporativo con análisis financiero y plan de acción" />
     </div>
   );
 }

@@ -10,12 +10,27 @@ const content = {
     lang: "EN",
     nav: [["Inicio", "#inicio"], ["Servicios", "#servicios"], ["Sobre mí", "#sobre-mi"], ["Método", "#metodo"], ["Contacto", "#contacto"]],
     tag: "Consultoría · Estrategia · Rentabilidad",
-    heroTitle: "Estrategia clara. Resultados reales.",
-    heroAlt: "Estructura tu idea o negocio en marcha para crecer con orden y rentabilidad.",
-    heroText: "Ayudo a emprendedores y pequeñas empresas a ordenar su negocio, mejorar sus procesos, entender sus números y tomar mejores decisiones para crecer de forma sostenible.",
-    primary: "Quiero agendar una asesoría",
+    heroTitle: "Ordena tus finanzas, procesos y decisiones para crecer con rentabilidad",
+    heroAlt: "Ayudo a emprendedores y pequeñas empresas a entender sus números, optimizar procesos y tomar mejores decisiones con una estrategia clara y accionable.",
+    heroText: "Revisamos tu situación actual para detectar bloqueos, priorizar mejoras y definir próximos pasos con foco en rentabilidad.",
+    primary: "Agendar diagnóstico gratuito",
     secondary: "Conoce mis servicios",
-    proof: [["45 min", "Diagnóstico gratuito"], ["3 áreas", "Estrategia, procesos y rentabilidad"], ["1 a 1", "Acompañamiento cercano"]],
+    microcopy: "Sin costo · 45 minutos · Por WhatsApp",
+    proof: [["45 min", "Diagnóstico gratuito de 45 minutos."], ["Plan inicial", "Plan de acción inicial."], ["3 áreas", "Finanzas + procesos + estrategia."]],
+    fitTag: "Diagnóstico gratuito",
+    fitTitle: "Para quién es este diagnóstico",
+    fitText: "Este diagnóstico está pensado para emprendedores y pequeñas empresas que ya están en marcha, pero necesitan más claridad, orden y control para crecer con rentabilidad.",
+    fitCards: [
+      ["Negocios que venden, pero no tienen claridad financiera.", "Tienen ingresos, pero no saben con precisión qué productos, costos o decisiones están afectando la rentabilidad."],
+      ["Emprendedores con procesos desordenados.", "El día a día depende demasiado de la improvisación, tareas repetidas o decisiones tomadas sin estructura."],
+      ["Empresas pequeñas que necesitan controlar costos.", "Buscan entender mejor sus gastos, márgenes, precios y prioridades para tomar decisiones más rentables."],
+      ["Equipos que quieren decidir con datos.", "Necesitan indicadores, reportes o dashboards simples para ver qué está pasando y actuar con más seguridad."],
+    ],
+    outcomeTag: "Qué obtienes",
+    outcomeTitle: "Qué obtienes en el diagnóstico gratuito",
+    outcomeText: "En 45 minutos revisamos tu situación actual y definimos una primera ruta de acción clara, práctica y enfocada en resultados.",
+    outcomeItems: ["Mapa inicial de problemas.", "Identificación de prioridades.", "Revisión de finanzas, procesos e indicadores.", "Recomendaciones prácticas.", "Próximo paso claro."],
+    diagnosisCtaTitle: "¿Quieres entender qué está frenando el crecimiento de tu negocio?",
     servicesTag: "Servicios",
     servicesTitle: "Soluciones para ordenar, crecer y rentabilizar tu negocio.",
     servicesText: "Trabajo con emprendedores y pequeñas empresas que necesitan claridad, foco y una ruta de acción práctica.",
@@ -50,12 +65,27 @@ const content = {
     lang: "ES",
     nav: [["Home", "#inicio"], ["Services", "#servicios"], ["About", "#sobre-mi"], ["Method", "#metodo"], ["Contact", "#contacto"]],
     tag: "Consulting · Strategy · Profitability",
-    heroTitle: "Clear strategy. Real results.",
-    heroAlt: "Structure your business idea or operating business to grow with order and profitability.",
-    heroText: "I help entrepreneurs and small businesses organize their business, improve processes, understand their numbers and make better decisions for sustainable growth.",
-    primary: "Book a free consultation",
+    heroTitle: "Organize your finances, processes and decisions to grow profitably",
+    heroAlt: "I help entrepreneurs and small businesses understand their numbers, optimize processes and make better decisions with a clear, actionable strategy.",
+    heroText: "We review your current situation to detect blockers, prioritize improvements and define next steps focused on profitability.",
+    primary: "Book a free diagnosis",
     secondary: "Explore services",
-    proof: [["45 min", "Free diagnosis"], ["3 areas", "Strategy, processes and profitability"], ["1:1", "Close support"]],
+    microcopy: "No cost · 45 minutes · Via WhatsApp",
+    proof: [["45 min", "Free 45-minute diagnosis."], ["Initial plan", "Initial action plan."], ["3 areas", "Finance + processes + strategy."]],
+    fitTag: "Free diagnosis",
+    fitTitle: "Who this diagnosis is for",
+    fitText: "This diagnosis is designed for entrepreneurs and small businesses that are already operating, but need more clarity, order and control to grow profitably.",
+    fitCards: [
+      ["Businesses that sell, but lack financial clarity.", "They have revenue, but do not know precisely which products, costs or decisions are affecting profitability."],
+      ["Entrepreneurs with disorganized processes.", "Daily work depends too much on improvisation, repeated tasks or decisions made without structure."],
+      ["Small companies that need cost control.", "They want to better understand expenses, margins, prices and priorities to make more profitable decisions."],
+      ["Teams that want to decide with data.", "They need simple indicators, reports or dashboards to see what is happening and act with more confidence."],
+    ],
+    outcomeTag: "What you get",
+    outcomeTitle: "What you get in the free diagnosis",
+    outcomeText: "In 45 minutes we review your current situation and define a first clear, practical action path focused on results.",
+    outcomeItems: ["Initial problem map.", "Priority identification.", "Review of finances, processes and indicators.", "Practical recommendations.", "Clear next step."],
+    diagnosisCtaTitle: "Do you want to understand what is slowing your business growth?",
     servicesTag: "Services",
     servicesTitle: "Solutions to organize, grow and improve your business profitability.",
     servicesText: "I work with entrepreneurs and small businesses that need clarity, focus and a practical action plan.",
@@ -94,7 +124,11 @@ function Header({ t, lang, setLang }) {
     <header className="header">
       <div className="container nav">
         <a className="logoLink" href="#inicio" aria-label="Gabriel Castellanos">
-          <img src="/gabriel-logo-corporativo.svg" alt="Gabriel Castellanos" />
+          <img className="logoMark" src="/gabriel-logo-corporativo.svg" alt="" aria-hidden="true" />
+          <span className="logoWordmark">
+            <strong>Gabriel Castellanos</strong>
+            <span>Consultor de negocios</span>
+          </span>
         </a>
         <nav className="desktopNav">
           {t.nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
@@ -150,6 +184,7 @@ function App() {
               <a className="primaryBtn" href={whatsappUrl} target="_blank" rel="noreferrer">{t.primary} →</a>
               <a className="secondaryBtn" href="#servicios">{t.secondary} →</a>
             </div>
+            <p className="microcopy">{t.microcopy}</p>
             <div className="proofGrid">
               {t.proof.map(([a,b], index) => (
                 <div className="proof" key={a}>
@@ -160,6 +195,45 @@ function App() {
             </div>
           </div>
           <HeroVisual />
+        </div>
+      </section>
+
+      <section className="sectionLight diagnosisFit">
+        <div className="container centerIntro">
+          <span className="sectionTag">{t.fitTag}</span>
+          <h2>{t.fitTitle}</h2>
+          <p>{t.fitText}</p>
+        </div>
+        <div className="container fitGrid">
+          {t.fitCards.map(([title, text], index) => (
+            <article className="fitCard" key={title}>
+              <div className="fitIcon">{index + 1}</div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="diagnosisOutcome sectionDark">
+        <div className="container outcomeGrid">
+          <div>
+            <span className="sectionTag gold">{t.outcomeTag}</span>
+            <h2>{t.outcomeTitle}</h2>
+            <p>{t.outcomeText}</p>
+          </div>
+          <div className="outcomeList">
+            {t.outcomeItems.map((item) => (
+              <div className="outcomeItem" key={item}>✓ {item}</div>
+            ))}
+          </div>
+        </div>
+        <div className="container diagnosisMiniCta">
+          <h3>{t.diagnosisCtaTitle}</h3>
+          <div className="diagnosisCtaAction">
+            <a className="primaryBtn" href={whatsappUrl} target="_blank" rel="noreferrer">{t.primary} →</a>
+            <p>{t.microcopy}</p>
+          </div>
         </div>
       </section>
 
